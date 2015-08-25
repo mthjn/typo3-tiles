@@ -1,0 +1,122 @@
+<f:layout name="Default"/>
+<f:section name="Main">
+	<div class="container">
+		<div class="row">
+			<main class="col-md-6" role="main">
+				<div id="slimpanel" class="">
+				  <div class="fliesenwrap">
+						<a class="select_item" data-item="p1">
+							<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '601'}"/>
+						</a>
+					</div>
+				  <div class="fliesenwrap">
+						<a class="select_item" data-item="p2">
+							<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '602'}"/>
+						</a>
+					</div>
+				  <div class="fliesenwrap">
+						<a class="select_item" data-item="p3">
+							<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '603'}"/>
+						</a>
+					</div>
+				  <div class="fliesenwrap">
+						<a class="select_item" data-item="p4">
+							<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '604'}"/>
+						</a>
+					</div>
+				  <div class="fliesenwrap">
+						<a class="select_item" data-item="p5">
+							<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '605'}"/>
+						</a>
+					</div>
+				  <div id="last" class="fliesenwrap">
+				    <a class="select_item" data-item="p6">
+							<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '606'}"/>
+						</a>
+				  </div>
+				</div>
+				<div id="fliesen" style="visibility:visible;">
+				  <div id="projekte-1" class="content_item" data-item="p1">
+						<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '501'}"/>
+						</div>
+				  <div id="projekte-2" class="content_item" data-item="p2">
+					 <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '502'}"/>
+						</div>
+				  <div id="projekte-3" class="content_item" data-item="p3">
+					 <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '503'}"/>
+				  	</div>
+				  <div id="projekte-4" class="content_item" data-item="p4">
+					 <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '504'}"/>
+				  	</div>
+				  <div id="projekte-5" class="content_item" data-item="p5">
+					 <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '505'}"/>
+				  	</div>
+				  <div id="projekte-6" class="content_item" data-item="p6">
+					 <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '506'}"/>
+				  	</div>
+				</div>
+			</main>
+			<div class="col-md-6">
+				&nbsp
+			</div>
+		</div>
+	</div>
+	<!-- preload images for backgrounds -->
+	<div id="bgarray" style="display:none;visibility:hidden;position:absolute;bottom:-999px"
+	  <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '2'}"/>
+  </div>
+  <!-- extract backgrounds and prepare the swap -->
+<script type="text/javascript">
+$(document).ready(function(){
+	// Load the BG urls
+  var bgs = [];
+	var images = $('#bgarray').find('img').map(function(){
+	    return $(this).attr('src')
+	 }).get()
+	for (var i = 0; i < images.length; i++) {
+		var css = "url(\'" + images[i] + "\')";
+		bgs.push( css );
+	 }
+	$('#plus').click(function( ){
+	 $('#fliesen').fadeToggle("fast");
+		$('#plusminus').toggleClass("shift");
+		 $('#slimpanel').toggleClass("shiftslim");
+		  $('#content').toggleClass("bgtoggle");
+	 });
+  // do the deed onclick
+	$('.select_item').click(function( ){
+		var ditem = $(this).attr('data-item');
+		  $('.content_item').hide("slow").filter( '[data-item="'+ditem+'"]' ).show("slow");
+    var selected = $('.select_item' ).hasClass( "activeitem" );
+     if ( selected !== false && selected !== $(this) ) {
+		  $( '.activeitem' ).removeClass( "activeitem" );
+	 }
+  $(this).addClass( "activeitem" );
+  // BG swap
+		var bgimage;
+		switch( ditem ) {
+			case "p1":
+				bgimage = bgs[0];
+				break;
+			case "p2":
+				bgimage = bgs[1];
+				break;
+			case "p3":
+				bgimage = bgs[2];
+				break;
+			case "p4":
+				bgimage = bgs[3];
+				break;
+			case "p5":
+				bgimage = bgs[4];
+				break;
+			case "p6":
+				bgimage = bgs[5];
+				break;
+		}
+	$('#content').css({"background-image" : bgimage});
+			 return false;
+	 });
+});
+</script>
+</f:section>

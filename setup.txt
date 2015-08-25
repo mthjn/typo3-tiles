@@ -1,0 +1,8 @@
+# Add this to the extension template for your page
+
+page.includeCSS {
+ file1 = fileadmin/templates/projekte.css
+}
+page.includeJS {
+ file1 = fileadmin/templates/jquery-1.11.3.min.js
+}

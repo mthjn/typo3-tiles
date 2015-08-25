@@ -1,0 +1,162 @@
+/*    UNTERSEITEN    */
+/*
+*
+*     Projekte
+*     --------
+*     github.com/mthjn
+*/
+
+/**
+*  General
+*****/
+body{
+transition: all 1s ease-in-out;
+-webkit-transition: all 1s ease-in-out;
+}
+.body-bg {
+  height: 995px;
+}
+footer {
+  position: relative;
+  top: -100px;
+}
+.breadcrumb-section .breadcrumb {margin-left:35px;}
+/**
+*  BS Navbar on dark nav bg
+*****/
+.glyphicon-list,.glyphicon-remove{
+z-index:2;
+}
+.navbar-header-main .navbar-brand {
+  background: transparent!important;
+}
+.navbar-main {
+  background:#000329;
+}
+.navbar-default .navbar-nav>li>a {
+  color:white!important;
+}
+.dropdown {
+  color: white;
+}
+/**
+*   Default background image
+*****/
+#content{min-height: 900px;
+background:url('/bs2/fileadmin/img-fliesen/AGP_Fliesen_Sub3.jpg');
+background-size:cover; background-repeat: no-repeat;
+position: relative;
+top: -100px;
+}
+/**
+* Projekte semitransp overlay
+*****/
+.main-section:after {
+content:"";position:absolute;top:0;left:0;z-index:0;width:100%;height:100%;background-color:rgba(0,0,0,0.3)
+}
+.bgtoggle:after {background-color:rgba(255,255,255,0.1)}
+#prodoverlay {text-align:center;min-height:650px;position:relative;top:40%}
+/**
+*    The tiles
+*****/
+#fliesen {
+-webkit-transition: all 1s ease-in-out;transition: all 1s ease-in-out;
+font-size: 12px;font-family: Roboto;background:white;padding:5px 30px;
+letter-spacing: 0.02em;max-width: 485px;margin-left:15px;height: 450px;overflow-y: scroll;
+position: relative;z-index:5;
+}
+#fliesen ul {padding: 15px}
+#fliesen ul li {list-style-image: url('fileadmin/projekte/dot.png');padding: 5px}
+#fliesen h1 {font-size: 37px}
+#fliesen > div{display:none}
+#fliesen > div:target{display:block}
+@media(min-width:605px){
+#fliesen{left:20px;top:200px;}
+#slimpanel{margin-top:32px!important;}
+}
+/**
+* Responsive
+*****/
+@media(max-width:300px){
+#fliesen{margin-left:0!important;margin-right:50px}
+#slimpanel{left:auto!important;right:5px!important}
+}
+@media(max-width:350px){
+footer{display:none}
+#content{top:0}
+}
+@media(max-width:540px){
+#fliesen{margin-left:0!important;margin-right:50px}
+}
+@media(max-width:590px){
+#slimpanel{left:auto!important;right:10px!important}
+}
+@media(max-width:770px){
+
+}
+@media(max-width:995px){
+#slimpanel{position:absolute;left:90%}
+}
+@media(max-width:1200px){
+#fliesen{margin-right:50px}
+}
+
+#plus{cursor:pointer;position:relative;z-index:2;top:350px;width:60px;overflow: hidden}
+#plusminus {width:120px;position:relative}
+
+/**
+* Breadcrumbs for Projekte Unterseiten
+*****/
+.breadcrumb-section .breadcrumb {
+color: white!important;
+position:absolute;
+z-index:2;
+padding-left: 2%;
+}
+.breadcrumb-section, .breadcrumb,.breadcrumb a {
+  display:block;
+  background-color: transparent!important;
+  border: 0;
+  margin-bottom: 0!important;
+  font-size: 15px!important;
+  color: white!important;
+}
+.breadcrumb>.active{
+color:white;
+}
+/**
+*      SlimPanel
+*****/
+#slimpanel{max-width:50px;margin-top:2px;position:absolute;z-index:2;left:90%}
+#slimpanel{
+top: 170px;
+-webkit-transition: all 1s cubic-bezier(.91,.1,.48,1.04);
+-moz-transition: all 1s cubic-bezier(.91,.1,.48,1.04);
+-ms-transition: all 1s cubic-bezier(.91,.1,.48,1.04);
+-o-transition: all 1s cubic-bezier(.91,.1,.48,1.04);
+transition: all 1s cubic-bezier(.91,.1,.48,1.04);
+}
+.shift {left:-60px!important}
+.shiftslim{left:0!important}
+#slimpanel img{
+}
+#slimpanel> div:last-of-type {
+    border-right: 1px solid;
+    border-color: pink;
+}
+#slimpanel {outline:2px solid white}
+#slimpanel div.fliesenwrap:not(#last) {
+  border-bottom: 2px solid white;
+}
+.select_item{-webkit-transition: all 0.8s ease-in-out 0s,opacity 0.25s ease-in-out;
+  -o-transition: all 0.8s ease-in-out 0s,opacity 0.25s ease-in-out;
+  transition: all 0.8s ease-in-out 0s,opacity 0.25s ease-in-out;}
+.select_item img:hover, .activeitem img {outline: 2px solid #ef7c00;position: relative;z-index: 1}
+/**
+* iPad main navbar
+*****/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+ .navbar-main {
+left:29%!important;padding:30px 29px 9px 1%!important;width:69%!important
+ }
+}

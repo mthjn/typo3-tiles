@@ -1,0 +1,101 @@
+########################################################
+#### BACKENDLAYOUT: DEFAULT SUBNAVIGATION 2 COLUMNS ####
+########################################################
+mod {
+	web_layout {
+		BackendLayouts {
+			default_subnavigation_left_2_columns {
+				title = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:backend_layout.default_subnavigation_left_2_columns
+				config {
+				backend_layout {
+					colCount = 2
+					rowCount = 7
+					rows {
+						1 {
+							columns {
+								1 {
+									name = Projekt1
+									colPos = 501
+								}
+								2 {
+									name = slimpanel img 50x50px 1
+									colPos = 601
+								}
+							}
+						}
+						2 {
+							columns {
+								1 {
+									name = Projekt2
+									colPos = 502
+								}
+								2 {
+									name = slimpanel img 50x50px 2
+									colPos = 602
+								}
+							}
+						}
+						3 {
+							columns {
+								1 {
+									name = Projekt3
+									colPos = 503
+								}
+								2 {
+									name = slimpanel img 50x50px 3
+									colPos = 603
+								}
+							}
+						}
+						4 {
+							columns {
+								1 {
+									name = Projekt4
+									colPos = 504
+								}
+								2 {
+									name = slimpanel img 50x50px 4
+									colPos = 604
+								}
+							}
+						}
+						5 {
+							columns {
+								1 {
+									name = Projekt5
+									colPos = 505
+								}
+								2 {
+									name = slimpanel img 50x50px 5
+									colPos = 605
+								}
+							}
+						}
+						6 {
+							columns {
+								1 {
+									name = Projekt6
+									colPos = 506
+								}
+								2 {
+									name = slimpanel img 50x50px 6
+									colPos = 606
+								}
+							}
+						}
+						7 {
+							columns {
+								1 {
+									name = Images for backgrounds
+									colspan = 2
+									colPos = 2
+								}
+							}
+						}
+					}
+				}
+				icon = EXT:bootstrap_package/Resources/Public/Images/BackendLayouts/default_subnavigation_left_2_columns.gif
+			}
+		}
+	}
+}
