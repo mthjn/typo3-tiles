@@ -1,5 +1,5 @@
 ### typo3-tiles
-Tiles for typo3.  
+Tiles for typo3. Will be updated one day.  
   
 Frontend  
 ![frontend](https://github.com/mthjn/typo3-tiles/blob/master/Tiles-Frontend.jpg)  
