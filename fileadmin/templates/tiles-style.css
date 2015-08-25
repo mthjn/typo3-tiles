@@ -1,7 +1,7 @@
 /*    UNTERSEITEN    */
 /*
 *
-*     Projekte
+*     Typo3 Tiles
 *     --------
 *     github.com/mthjn
 */
@@ -43,7 +43,7 @@ z-index:2;
 *   Default background image
 *****/
 #content{min-height: 900px;
-background:url('/bs2/fileadmin/img-fliesen/AGP_Fliesen_Sub3.jpg');
+background:url('../ext/default.jpg');
 background-size:cover; background-repeat: no-repeat;
 position: relative;
 top: -100px;
@@ -66,7 +66,7 @@ letter-spacing: 0.02em;max-width: 485px;margin-left:15px;height: 450px;overflow-
 position: relative;z-index:5;
 }
 #fliesen ul {padding: 15px}
-#fliesen ul li {list-style-image: url('fileadmin/projekte/dot.png');padding: 5px}
+#fliesen ul li {list-style-image: url('../projekte/dot.png');padding: 5px}
 #fliesen h1 {font-size: 37px}
 #fliesen > div{display:none}
 #fliesen > div:target{display:block}
@@ -111,7 +111,6 @@ footer{display:none}
 color: white!important;
 position:absolute;
 z-index:2;
-padding-left: 2%;
 }
 .breadcrumb-section, .breadcrumb,.breadcrumb a {
   display:block;
@@ -136,22 +135,33 @@ top: 170px;
 -o-transition: all 1s cubic-bezier(.91,.1,.48,1.04);
 transition: all 1s cubic-bezier(.91,.1,.48,1.04);
 }
-.shift {left:-60px!important}
-.shiftslim{left:0!important}
-#slimpanel img{
-}
-#slimpanel> div:last-of-type {
-    border-right: 1px solid;
-    border-color: pink;
-}
 #slimpanel {outline:2px solid white}
-#slimpanel div.fliesenwrap:not(#last) {
-  border-bottom: 2px solid white;
+/* only make the bottom border if there is another div after it */
+#slimpanel div.fliesenwrap:not(#slim-first) div {
+  border-top: 2px solid white;
 }
 .select_item{-webkit-transition: all 0.8s ease-in-out 0s,opacity 0.25s ease-in-out;
   -o-transition: all 0.8s ease-in-out 0s,opacity 0.25s ease-in-out;
   transition: all 0.8s ease-in-out 0s,opacity 0.25s ease-in-out;}
 .select_item img:hover, .activeitem img {outline: 2px solid #ef7c00;position: relative;z-index: 1}
+/**
+*   Plusminus
+*****/
+#plus {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    top: 375px;
+    left: 0;
+    width: 60px;
+    overflow: hidden;
+}
+#plusminus {
+    width: 120px;
+    position: relative;
+}
+.shift {left:-60px!important}
+.shiftslim{left:0!important}
 /**
 * iPad main navbar
 *****/
