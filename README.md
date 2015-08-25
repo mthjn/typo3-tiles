@@ -10,7 +10,7 @@ Backend
   
 #### requires
 [The Bootstrap Package](https://github.com/benjaminkott/bootstrap_package) where it (for sakes of the get-it-done-asap) 
-overwrites one of the default templates - DEFAULT SUBNAVIGATION 2 COLUMNS  
+overwrites one of the default templates - DEFAULT SUBNAVIGATION 2 COLUMNS. This will/should be changed one day.  
   
 #### use it   
 * Get the Bootstrap Package extension.  
